@@ -1,8 +1,3 @@
-function main(){
-    const idNode = document.getElementById("orderId");
-    idNode.innerText = localStorage.getItem("orderId");
-    console.log(localStorage.getItem("orderId"))
-    localStorage.clear();
-}
-
-main();
+const urlSearchParams = new URLSearchParams(window.location.search);
+const orderId = urlSearchParams.get("orderId");
+document.querySelector('#orderId').textContent = orderId
